@@ -426,36 +426,51 @@ h3 {
     }
     
     .logo-column {
-        flex-direction: row;
-        gap: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
         padding: 20px 0;
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-items: center;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
     .logo-item {
-        height: 60px;
-        width: 70px;
-        padding: 8px;
+        height: 120px;
+        width: 140px;
+        padding: 15px;
     }
     
     .logo-img {
-        max-width: 50px;
-        max-height: 35px;
+        max-width: 110px;
+        max-height: 80px;
     }
     
     .logo-item::after {
         font-size: 11px;
         padding: 10px 12px;
-        width: 240px;
+        width: 200px;
         left: 50%;
         bottom: 100%;
         top: auto;
         transform: translateX(-50%) translateY(-10px);
+        margin-bottom: 5px;
     }
     
     .logo-item:hover::after {
         transform: translateX(-50%) translateY(-20px);
+    }
+    
+    /* Ensure tooltips stay on screen for edge logos */
+    .logo-item:first-child::after,
+    .logo-item:nth-child(2)::after {
+        left: 0;
+        transform: translateY(-10px);
+    }
+    
+    .logo-item:first-child:hover::after,
+    .logo-item:nth-child(2):hover::after {
+        transform: translateY(-20px);
     }
 }
 
