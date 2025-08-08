@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header style="position: relative;">
         <div class="header-content">
             <div class="header-left">
                 <h1>khalaf.ai</h1>
@@ -20,13 +20,18 @@
                     <a href="#" onclick="showSection('projects')" class="nav-link">projects</a>
                 </nav>
             </div>
-            <div class="header-right">
-                <a href="https://linkedin.com/in/mohammadkhal" target="_blank" class="linkedin-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a>
-            </div>
+        </div>
+        <div class="header-right" style="position: absolute; top: 0; right: 0; padding: 1.5rem 2.5rem 0 0; display: flex; gap: 1.2rem;">
+            <a href="https://linkedin.com/in/mohammadkhal" target="_blank" class="linkedin-link" aria-label="LinkedIn profile">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/MrKhalaf" target="_blank" class="github-link" aria-label="GitHub profile">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387 0.6 0.113 0.82-0.258 0.82-0.577 0-0.285-0.01-1.04-0.015-2.04-3.338 0.724-4.042-1.61-4.042-1.61-0.546-1.387-1.333-1.756-1.333-1.756-1.089-0.745 0.084-0.729 0.084-0.729 1.205 0.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495 0.997 0.108-0.775 0.418-1.305 0.762-1.605-2.665-0.305-5.466-1.334-5.466-5.931 0-1.31 0.469-2.381 1.236-3.221-0.124-0.303-0.535-1.523 0.117-3.176 0 0 1.008-0.322 3.301 1.23 0.957-0.266 1.983-0.399 3.003-0.404 1.02 0.005 2.047 0.138 3.006 0.404 2.291-1.553 3.297-1.23 3.297-1.23 0.653 1.653 0.242 2.873 0.118 3.176 0.77 0.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921 0.43 0.372 0.823 1.102 0.823 2.222 0 1.606-0.014 2.898-0.014 3.293 0 0.322 0.216 0.694 0.825 0.576 4.765-1.589 8.199-6.085 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
         </div>
     </header>
 
@@ -38,7 +43,7 @@
                     <div class="bio-content">
                         <p class="fade-in-text">Founder building AI solutions to fix healthcare pricing. Currently deploying VoiceAI agents that give patients real pricing transparency and choice.</p>
                         
-                        <p class="fade-in-text">Built security & authentication systems at Amazon Web Services for 3+ years, handling Earth's largest distributed platforms. Mathematics & Computer Science from Emory University.</p>
+                        <p class="fade-in-text">Built security & authentication systems at Amazon Web Services for 3+ years, handling Earth's largest distributed platforms.</p>
                         
                         <p class="fade-in-text">Expert in large-scale system design, mathematical optimization, and AI workflow automation. I build systems that scale to millions while solving trillion-dollar problems.</p>
                     </div>
@@ -66,8 +71,8 @@
             <h2>writeups</h2>
             <div class="writeup-list">
                 <article class="writeup clickable" onclick="showWriteup('physical-ai-data')">
-                    <h3>on capturing physical ai data</h3>
-                    <p>why data pipelines matter more than models in the race for physical world AI dominance.</p>
+                    <h3>on embedded ai & data capture</h3>
+                    <p>why data pipelines will matter more than models.</p>
                 </article>
             </div>
         </section>
@@ -80,7 +85,7 @@
             </div>
             <div class="writeup-content">
                 <div class="article-intro">
-                    <p class="lead">A consensus is forming: robotics + physical AI is the next great frontier. Where do I position myself here?</p>
+                    <p class="lead">A consensus is forming: robotics + physical AI is the next great frontier. Where do I position myself here as a founder?</p>
                 </div>
 
                 <p class="lead">Everyday billions of critical actions—performed by surgeons, farmers, forklift drivers—fade away without leaving behind accessible, structured data. Meanwhile, software industries thrive because of their endless digital footprints.</p>

@@ -17,33 +17,33 @@ header {
     padding: 20px 40px;
     border-bottom: 1px solid #000000;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     position: relative;
 }
 
 .header-left {
-    flex: 1;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    margin-top: 0;
-    flex-shrink: 0;
-    margin-left: 20px;
-    height: 24px;
-    align-self: flex-start;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 74px;
     font-weight: 700;
     margin-bottom: 15px;
     letter-spacing: -0.5px;
@@ -53,6 +53,7 @@ nav {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .linkedin-link {
@@ -78,6 +79,7 @@ nav {
     color: #000000;
     text-decoration: none;
     font-weight: 400;
+    font-size: 17px;
     transition: opacity 0.2s ease;
 }
 
@@ -90,8 +92,7 @@ nav {
 }
 
 main {
-    padding: 0 40px;
-    max-width: 1200px;
+    max-width: none;
 }
 
 .content-section {
@@ -116,6 +117,7 @@ h2 {
     font-weight: 700;
     margin-bottom: 30px;
     letter-spacing: -0.3px;
+    text-align: center;
 }
 
 h3 {
@@ -130,6 +132,9 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .writeup {
@@ -181,6 +186,8 @@ h3 {
 
 .writeup-content {
     max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .writeup-content p {
@@ -259,6 +266,8 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .project {
@@ -298,8 +307,10 @@ h3 {
     display: flex;
     gap: 50px;
     align-items: flex-start;
-    max-width: 100%;
+    max-width: 900px;
     padding: 10px 0;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .bio-text {
@@ -318,7 +329,7 @@ h3 {
 .bio-content p {
     margin-bottom: 18px;
     line-height: 1.65;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -353,11 +364,11 @@ h3 {
 }
 
 .bio-logos {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    min-width: 150px;
+    min-width: 0px;
 }
 
 .logo-column {
