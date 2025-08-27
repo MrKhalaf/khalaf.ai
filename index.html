@@ -77,6 +77,10 @@
         <section id="writeups" class="content-section">
             <h2>writeups</h2>
             <div class="writeup-list">
+                <article class="writeup clickable" onclick="showWriteup('definitive-ai-workflow')">
+                    <h3>on ai coding & my ultimate productivity workflow</h3>
+                    <p>thoughts on over 2 years of ai development & how i transformed my role</p>
+                </article>
                 <article class="writeup clickable" onclick="showWriteup('physical-ai-data')">
                     <h3>on embedded ai & data capture</h3>
                     <p>why data pipelines will matter more than models.</p>
@@ -129,24 +133,62 @@
             </div>
         </section>
 
+        <section id="writeup-definitive-ai-workflow" class="content-section writeup-detail">
+            <div class="writeup-header">
+                <button onclick="showSection('writeups')" class="back-button">&lt; back to writeups</button>
+                <h2>my definitive AI workflow</h2>
+            </div>
+            <div class="writeup-content">
+                <h3>After over 2 years of AI development experimentation I've found my flow and transformed my role</h3>
+                <p>I began like many others: testing local LLMs and cycling through the latest coding assistants. Nothing endured. </p> 
+                <p>Early workflows were inefficient as they involved dragging files, copying outputs, pasting changes. MCP integrations promised structure but never worked.</p>
+                <p>The debate around coding with LLMs is polarized. Executives imagine full automation; skeptics dismiss the field outright. The truth is between these extremes. </p> 
+                <p>For backend engineers like me, LLMs cut the friction of learning frameworks, trying multiple designs in parallel, and asking questions without hesitation.</p>
+                <p>The chat format quickly became a limitation. Tracking revisions and branches was impossible. Terminal-based tools like Claude Code helped, but remained costly and opaque.</p>
+                <p>Atlassian’s Rovo Agent changed that. With its beta release I could split sessions across repositories, generate prototypes, and review code properly inside VSCode.</p>
+                <h4>I came up with a cool workflow:</h4>
+                <h4>Step 0: Figure out what you want to build</h5>
+                <p>Can't help you with that one. Whatever it is, you should have a long brainstorming session where you write everything down before reviewing.</p>
+                <h4>Step 1: Fight with the LM</h5>
+                <p>Refine your brainstorm doc to get the gist of what you want then feed it into the LLM.</p>
+
+                <blockquote class="strategy-quote">"Attached is the BRAINSTORM.md for Timeio, an automated timecard OCR processor. Go through the document and challenge decisions & assumptions made. Questions should be asked one by one and discussed at length before proceeding. Use the answers from the discussions to inform a new PRD in PRD.md."</blockquote>
+                
+                <p>The results are stunning. It's not just the magic of the PRD itself but the process by which you're actually digesting your own thoughts and second-guessing prior assumptions. By the end of the discussion (usually about an hour) the biggest transformation is in your own  mental model of your now-refined plan.</p>
+                <h4>Step 2: The Sprint Plan</h5>
+                <p>We know what we're building now. Organize everything by generating a Sprint Plan. Atlassian's Rovo Agent has native Jira integration so I use that (free Claude credits under the hood).</p>
+                <p>Review the sprint plan once generated. Don't sweat the details much here because the PRD should cover the main requirements; this is for tackling tasks in an organized manner and making it easier for you to review the code piece-by-piece later.</p>
+                <h4>Step 3: The Execution Sprint</h5>
+                <p><strong>Plan, vision, and sprint in hand. We're ready to go.</strong></p>
+                <p>You've put in hours of work & now it's time to reap the rewards. The strong mental vision of the finished product, coupled with the documented detail will now come to fruition.</p>
+                <p>The sprint plan is now the central tracking mechanism for the coding agent(s).</p>
+                <h4>Step 4: Back at The Wheel</h5>
+                <p>Armed with all the context, you now <em>review</em> code. Yes you actually need to read it almost line-by-line and ask questions. I have a custom keybinding that drops a <code>REVIEW:</code> comment based on the filetype. After commenting my feedback there, I go back to Rovo and it addresses my concerns or challenges my thinking.</p>
+                <h4>Closing out</h4>
+                <ul>
+                    <li>Mistakes I see: Treating LLMs as magic typewriters. Skipping design, planning, and documentation. Failing to integrate with task management or write tests. The real bottleneck is now system-level thinking, not typing speed.</li>
+                    <li>My role shifted upward. I spend my time on design, architecture, and database schemas.</li>
+                    <li>If AI coding feels shallow, start with planning. Write requirements by hand before using a model. Only then introduce an agent into the loop. Use tools that support review, write proper tests, and keep documentation alive. AI does not remove the work it just accelerates it.</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="projects" class="content-section">
             <h2>projects</h2>
             <div class="project-grid">
                 <div class="project">
-                    <a href="https://docs.google.com/presentation/d/1R1YDWK77CLuwgm7wS9bA9SkPAXZ1rKBlsHudblAG59o/edit?usp=sharing" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
-                        <div class="project-thumbnail">
-                            <img src="res/finalform.png" alt="FinalForm App Logo" />
-                        </div>
-                        <h3>FinalForm</h3>
-                        <p>computer vision-aided physical therapy startup – Siperstein 2020 Pitch Competition</p>
-                    </a>
+                    <div class="project-thumbnail">
+                        <img src="res/dspies.png" alt="DSPies Logo" class="project-img" />
+                    </div>
+                    <h3>DSPies</h3>
+                    <p>Applied DSPy for agentic AI tuning & evals. Open-Source WIP.</p>
                 </div>
                 <div class="project">
                     <div class="project-thumbnail">
-                        <div class="placeholder-img">[img]</div>
+                        <img src="res/carequotes.png" alt="CareQuotes Logo" class="project-img" />
                     </div>
-                    <h3>DSPies</h3>
-                    <p>Applied DSPy demonstration for production AI tuning & evals.</p>
+                    <h3>CareQuotes</h3>
+                    <p>Your outbound Voice AI agent army fetching quotes & appointments for healthcare.</p>
                 </div>
                 <div class="project">
                     <div class="project-thumbnail">
@@ -156,13 +198,15 @@
                     <p>Healthcare patient education platform.</p>
                 </div>
                 <div class="project">
-                    <div class="project-thumbnail">
-                        <div class="placeholder-img">[img]</div>
-                    </div>
-                    <h3>CareQuotes</h3>
-                    <p>Your outbound Voice AI agent army fetching quotes & appointments for healthcare.</p>
+                    <a href="https://docs.google.com/presentation/d/1R1YDWK77CLuwgm7wS9bA9SkPAXZ1rKBlsHudblAG59o/edit?usp=sharing" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+                        <div class="project-thumbnail">
+                            <img src="res/finalform.png" alt="FinalForm App Logo" />
+                        </div>
+                        <h3>FinalForm</h3>
+                        <p>computer vision-aided physical therapy startup – Siperstein Competition Finalist 2020</p>
+                    </a>
                 </div>
-                <div class="project">
+                                <div class="project">
                     <div class="project-thumbnail">
                         <a href="https://github.com/gvestal/MiningBig5/blob/master/big5NB.ipynb" target="_blank">
                             <img src="res/personality-mining.png" alt="Data Mining a million personalities" />
