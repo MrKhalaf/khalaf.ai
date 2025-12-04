@@ -76,6 +76,10 @@
         <section id="writeups" class="content-section">
             <h2>writeups</h2>
             <div class="writeup-list">
+                <article class="writeup clickable" onclick="showWriteup('ezpt-design-comparison')">
+                    <h3>my own benchmark: ez-pt design</h3>
+                    <p>opus 4.5 vs gemini on redesigning my open-source rehab app</p>
+                </article>
                 <article class="writeup clickable" onclick="showWriteup('definitive-ai-workflow')">
                     <h3>on ai coding & my ultimate productivity workflow</h3>
                     <p>thoughts on over 2 years of ai development & how i transformed my role</p>
@@ -92,6 +96,50 @@
         </section>
 
         <!-- Individual Writeup Sections -->
+        <section id="writeup-ezpt-design-comparison" class="content-section writeup-detail">
+            <div class="writeup-header">
+                <button onclick="showSection('writeups')" class="back-button">&lt; back to writeups</button>
+                <h2>my own benchmark: ez-pt design</h2>
+            </div>
+            <div class="writeup-content">
+                <p>I maintain <a href="https://github.com/MrKhalaf/ez-pt" target="_blank" rel="noopener" style="color:#2563eb;text-decoration:underline;">ez-pt</a>, an open-source rehab app. Physical therapy apps look clinical and boring. Wanted to copy the Apple Fitness vibe instead.</p>
+
+                <p>Gave both Opus 4.5 and Gemini the same prompt: redesign this to match Apple Fitness. Make it sleek.</p>
+
+                <h3>Home Screen (Dark Mode)</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">Opus 4.5</div>
+                        <img src="res/OPUS4.5.png" alt="Opus 4.5 Dark Mode Home Screen">
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comparison-label">Gemini</div>
+                        <img src="res/GeminiDark.png" alt="Gemini Dark Mode Home Screen">
+                    </div>
+                </div>
+
+                <p>Opus got closer to that Apple polish. Better shadows, spacing.</p>
+
+                <h3>Exercise Timer</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">Opus 4.5</div>
+                        <video autoplay muted loop playsinline>
+                            <source src="res/OPUSLightActivity.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comparison-label">Gemini</div>
+                        <video autoplay muted loop playsinline>
+                            <source src="res/GeminiLightActivity.mov" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <p>The timer shows it best. Opus added a glow around the circle—the kind of thing Apple does. Gemini's works but it's just a timer.</p>
+            </div>
+        </section>
+
         <section id="writeup-physical-ai-data" class="content-section writeup-detail">
             <div class="writeup-header">
                 <button onclick="showSection('writeups')" class="back-button">&lt; back to writeups</button>
