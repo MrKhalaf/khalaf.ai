@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my own benchmark: ez-pt design | khalaf.ai</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="my own benchmark: ez-pt design">
+    <meta property="og:description" content="opus 4.5 vs gemini on redesigning my open-source rehab app">
+    <meta property="og:image" content="https://khalaf.ai/res/og/ezpt-design-comparison.png">
+    <meta property="og:url" content="https://khalaf.ai/writeups/ezpt-design-comparison.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="my own benchmark: ez-pt design">
+    <meta name="twitter:description" content="opus 4.5 vs gemini on redesigning my open-source rehab app">
+    <meta name="twitter:image" content="https://khalaf.ai/res/og/ezpt-design-comparison.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="site-title"><a href="../index.html" class="site-title-link">khalaf.ai</a></h1>
+                <nav>
+                    <a href="../index.html" class="nav-link">home</a>
+                    <a href="../index.html#projects" class="nav-link">projects</a>
+                    <a href="../index.html#writeups" class="nav-link active">writeups</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/MrKhalaf" target="_blank" class="github-link" aria-label="GitHub profile">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387 0.6 0.113 0.82-0.258 0.82-0.577 0-0.285-0.01-1.04-0.015-2.04-3.338 0.724-4.042-1.61-4.042-1.61-0.546-1.387-1.333-1.756-1.333-1.756-1.089-0.745 0.084-0.729 0.084-0.729 1.205 0.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495 0.997 0.108-0.775 0.418-1.305 0.762-1.605-2.665-0.305-5.466-1.334-5.466-5.931 0-1.31 0.469-2.381 1.236-3.221-0.124-0.303-0.535-1.523 0.117-3.176 0 0 1.008-0.322 3.301 1.23 0.957-0.266 1.983-0.399 3.003-0.404 1.02 0.005 2.047 0.138 3.006 0.404 2.291-1.553 3.297-1.23 3.297-1.23 0.653 1.653 0.242 2.873 0.118 3.176 0.77 0.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921 0.43 0.372 0.823 1.102 0.823 2.222 0 1.606-0.014 2.898-0.014 3.293 0 0.322 0.216 0.694 0.825 0.576 4.765-1.589 8.199-6.085 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/mohammadkhal" target="_blank" class="linkedin-link" aria-label="LinkedIn profile">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section active writeup-detail">
+            <div class="writeup-header">
+                <a href="../index.html#writeups" class="back-button">&lt; back to writeups</a>
+                <h2>my own benchmark: ez-pt design</h2>
+            </div>
+            <div class="writeup-content">
+                <p>I maintain <a href="https://github.com/MrKhalaf/ez-pt" target="_blank" rel="noopener">ez-pt</a>, an open-source rehab app. Physical therapy apps look clinical and boring. Wanted to copy the Apple Fitness vibe instead.</p>
+
+                <p>Gave both Opus 4.5 and Gemini the same prompt: redesign this to match Apple Fitness. Make it sleek.</p>
+
+                <h3>Home Screen (Dark Mode)</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">Opus 4.5</div>
+                        <img src="../res/OPUS4.5.png" alt="Opus 4.5 Dark Mode Home Screen">
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comparison-label">Gemini</div>
+                        <img src="../res/GeminiDark.png" alt="Gemini Dark Mode Home Screen">
+                    </div>
+                </div>
+
+                <p>Opus got closer to that Apple polish. Better shadows, spacing.</p>
+
+                <h3>Exercise Timer</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">Opus 4.5</div>
+                        <video autoplay muted loop playsinline>
+                            <source src="../res/OPUSLightActivity.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comparison-label">Gemini</div>
+                        <video autoplay muted loop playsinline>
+                            <source src="../res/GeminiLightActivity.mov" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <p>The timer shows it best. Opus added a glow around the circle—the kind of thing Apple does. Gemini's works but it's just a timer.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
