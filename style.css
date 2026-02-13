@@ -14,6 +14,7 @@ body {
 }
 
 header {
+    position: relative;
     padding: 20px 40px;
     border-bottom: 1px solid #000000;
     margin-bottom: 40px;
@@ -36,17 +37,24 @@ header {
 }
 
 .header-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5rem 2.5rem 0 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+    gap: 1.2rem;
 }
 
 header h1 {
-    font-size: 74px;
+    font-size: 68px;
     font-weight: 700;
     margin-bottom: 15px;
     letter-spacing: -0.5px;
+}
+
+.site-title-link {
+    color: inherit;
+    text-decoration: none;
 }
 
 nav {
@@ -56,7 +64,8 @@ nav {
     justify-content: center;
 }
 
-.linkedin-link {
+.linkedin-link,
+.github-link {
     color: #000000;
     text-decoration: none;
     transition: opacity 0.2s ease;
@@ -66,11 +75,13 @@ nav {
     padding: 2px;
 }
 
-.linkedin-link:hover {
+.linkedin-link:hover,
+.github-link:hover {
     opacity: 0.7;
 }
 
-.linkedin-link svg {
+.linkedin-link svg,
+.github-link svg {
     width: 20px;
     height: 20px;
 }
@@ -81,6 +92,8 @@ nav {
     font-weight: 400;
     font-size: 17px;
     transition: opacity 0.2s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
 }
 
 .nav-link:hover {
@@ -89,6 +102,7 @@ nav {
 
 .nav-link.active {
     font-weight: 700;
+    border-bottom: 2px solid #000000;
 }
 
 main {
@@ -151,6 +165,12 @@ h3 {
     line-height: 1.5;
 }
 
+/* Writeup links */
+.writeup-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Clickable writeups */
 .writeup.clickable {
     cursor: pointer;
@@ -164,10 +184,12 @@ h3 {
 
 /* Writeup detail pages */
 .writeup-header {
-    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
 }
 
 .back-button {
+    display: inline-block;
     background: none;
     border: 1px solid #000000;
     color: #000000;
@@ -177,17 +199,19 @@ h3 {
     cursor: pointer;
     transition: all 0.2s ease;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .back-button:hover {
     background-color: #000000;
-    color: #b8c8c6;
+    color: #ffffff;
 }
 
 .writeup-content {
     max-width: 700px;
     margin: 0 auto;
     text-align: left;
+    padding: 0 20px;
 }
 
 .writeup-content p {
@@ -261,6 +285,23 @@ h3 {
     line-height: 1.6;
 }
 
+.writeup-content a,
+.bio-content a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Project link styles */
+.project > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-img {
+    max-width: 100%;
+    margin: 24px 0;
+}
+
 /* Projects Section */
 .project-grid {
     display: grid;
@@ -274,6 +315,12 @@ h3 {
     border: 1px solid #000000;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-thumbnail {
@@ -289,7 +336,8 @@ h3 {
     overflow: hidden;
 }
 
-.project-thumbnail img {
+.project-thumbnail img,
+.project-thumbnail video {
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -299,8 +347,34 @@ h3 {
     border-radius: 0;
 }
 
+.project-thumbnail--white {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.project-thumbnail--white .project-img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+.project-thumbnail--dark {
+    background-color: #232F3E;
+}
+
+.project-thumbnail--dark .project-img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
 .project h3 {
     margin-bottom: 10px;
+}
+
+.project h3 a {
+    color: inherit;
+    text-decoration: underline;
 }
 
 .project p {
@@ -576,6 +650,24 @@ h3 {
     h3 {
         font-size: 14px;
     }
+}
+
+/* Responsive iframe container */
+.iframe-responsive {
+    position: relative;
+    width: 100%;
+    max-width: 670px;
+    aspect-ratio: 670 / 525;
+    margin: 20px 0;
+}
+
+.iframe-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Comparison Grid for Media */
